@@ -12,3 +12,9 @@ console.log(typeof null)//object
 console.log(typeof age) //number
 console.log(typeof isLoggedIn) //boolean
 console.log(typeof state) //undefined
+
+// primitives - number, string, boolean, null, undefined, symbol, bigint
+// reference - array, object, function 
+
+let heroes = ["shaktiman", "naagraj", "doga"] //array
+console.log(typeof heroes) //object
