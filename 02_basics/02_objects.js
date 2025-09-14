@@ -44,13 +44,31 @@
 // }
 // console.log(regularuser.userfullname.fullname.lastname)
 
-const obj1 ={1:'a',2:'b'}
-const obj2 ={3:'a',4:'b'}
+// const obj1 ={1:'a',2:'b'}
+// const obj2 ={3:'a',4:'b'}
 
-//const obj3={obj1,obj2}
-const obj3 = Object.assign({},obj1,obj2)
-const obj4 = {...obj1,...obj2}
+// //const obj3={obj1,obj2}
+// const obj3 = Object.assign({},obj1,obj2)
+// const obj4 = {...obj1,...obj2}
 
-console.log(obj4)
+// console.log(obj4)
+
+
+// ******************** object destructuring ******************
+
+const course = {
+    name:"js in hindi",
+    price: 999,
+    courseinstructor : "hitesh"
+
+}
+
+console.log(course.courseinstructor) // normal
+
+const {courseinstructor} = course //destructuring
+console.log(courseinstructor)
+
+const {courseinstructor:instructor} = course // simplified destructuring
+console.log(instructor);
 
 
