@@ -12,7 +12,7 @@
 // console.log(this)
 
 
-/* this works in object scope and not in function scope
+/* this keyword works in object scope and not in function scope
 example:
 function chai(){
     let name="chai"
