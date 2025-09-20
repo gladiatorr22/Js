@@ -9,7 +9,9 @@ const randomcolor = function(){
 
 let stop
 const startchangingcolor = function(){
-  stop = setInterval(changebodycolor,1000)
+  if (!stop){
+    stop = setInterval(changebodycolor,1000)
+  }
   function changebodycolor(){ 
   document.querySelector('body').style.backgroundColor = randomcolor()}
 }
