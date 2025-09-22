@@ -52,6 +52,8 @@ const TASupport = {
 
 Teacher.__proto__ = User
 
+console.log(TASupport);
+
 // modern syntax
 Object.setPrototypeOf(TeachingSupport, Teacher)
 
