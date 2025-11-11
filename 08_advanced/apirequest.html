@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <p>0	UNSENT:	Client has been created. open() not called yet.</p>
+    <p>1	OPENED:	open() has been called.</p>
+    <p>2	HEADERS_RECEIVED:	send() has been called, and headers and status are available.</p>
+    <p>3	LOADING:	Downloading; responseText holds partial data.</p>
+    <p>4	DONE:	The operation is complete.</p>
+</body>
+<script>
+    const url = "https://api.github.com/users/gladiator22"
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET',url) // open doesnt call itself
+    xhr.onreadystatechange = function(){ //continously tracks the state change
+        console.log(xhr.readyState);
+        if(xhr.readyState==4){
+            const response=JSON.parse(this.responseText) // converts to object
+            console.log(response);
+            console.log(response.followers);   
+        }
+    }
+    xhr.send() // we use send to call open 
+</script>
+</html>
